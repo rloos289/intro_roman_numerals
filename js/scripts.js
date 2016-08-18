@@ -46,10 +46,9 @@ function translate (number) {
     moreThanZero()
     return newNumber;
   }
-
 }
 
-function exceptions() {
+function exceptions(symbols) {
   var string = symbols.join('');
   var dcSearch = /DCCCC/;
   var cSearch = /CCCC/;
@@ -77,7 +76,13 @@ $(document).ready(function(){
   $('form').submit(function(event) {
     event.preventDefault();
     var userInput = $('#userNumber').val();
-    romanNum(userInput);
+    if (userInput >= 3999) {
+      alert('Please enter a number smaller than 3999');
+    } else {
+    translate(userInput);
+    $('.result').text(exceptions(symbols));
     // dont let user put in more than 3999
+    // add refresh
+    }
   });
 });
