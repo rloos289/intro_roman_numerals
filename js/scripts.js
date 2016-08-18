@@ -28,7 +28,32 @@ function translate (number) {
     console.log(newNumber);
     moreThanZero()
     return newNumber;
-}
+  } else if (newNumber >= 50) {
+    newNumber -= 50;
+    symbols.push('L');
+    console.log(newNumber);
+    moreThanZero()
+    return newNumber;
+  } else if (newNumber >= 10) {
+    newNumber -= 10;
+    symbols.push('X');
+    console.log(newNumber);
+    moreThanZero()
+    return newNumber;
+  } else if (newNumber >= 5) {
+    newNumber -= 5;
+    symbols.push('V');
+    console.log(newNumber);
+    moreThanZero()
+    return newNumber;
+  } else if (newNumber >= 1) {
+    newNumber -= 1;
+    symbols.push('I');
+    console.log(newNumber);
+    moreThanZero()
+    return newNumber;
+  }
+
 }
 
 //<!-- Front End  -->
