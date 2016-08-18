@@ -81,8 +81,7 @@ $(document).ready(function(){
     } else {
     translate(userInput);
     $('.result').text(exceptions(symbols));
-    // dont let user put in more than 3999
-    // add refresh
-    }
+  } return symbols = [];
+
   });
 });
